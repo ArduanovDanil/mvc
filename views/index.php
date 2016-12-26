@@ -7,16 +7,22 @@
 <body>
 
 <?php
+// var_dump($items);
 foreach ($items as $value) {
     foreach ($value as $key => $el) {
-        if ($key == 'newsdate') {
-            echo $el; ?> <br>
+        if ($key == 'id') { ?>
+            <a href="/views/add.php"><?php $a = $el;  // echo $a; ?> </a><br>
         <?php }
+        if ($key == 'newsdate') { ?>
+            <a href="/pageonenew.php?id=<?php echo $a; ?>"><?php  echo $el; ?> </a><br>
+        <?php }
+
         if ($key == 'newstitle') {
-            echo $el; ?> <br>
-       <?php }
-    }
-}
+            echo $el; }?> <br>
+
+          <?php }
+        }
+
 ?>
 
 <p>

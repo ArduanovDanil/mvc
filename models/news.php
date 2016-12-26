@@ -21,6 +21,17 @@ function News_insert($newstitle, $newnews)
     Sql_exec($sql);
 }
 
+function News_getOneNew()
+{
+    $id = $_GET['id'];
+   // echo $id;
+    $sql = "SELECT newstext FROM news where id=".$id;
+    // echo $sql;
+
+    return Sql_query($sql);
+}
+
+
 /*
 $sql = "SELECT * FROM news ORDER BY newsdate";
 $res = mysql_query($sql);
