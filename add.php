@@ -15,8 +15,3 @@ else {
     //echo 'Нет новостей';
     header('Location: /index.php');
 }
-
-
-// News_insert($newnews);
-// header('Location: /index.php');
-// die;
